@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Email from '../components/Email'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Social from '../components/Social'
@@ -20,6 +21,7 @@ export default function Home() {
 
       <Footer />
       <Social />
+      <Email />
     </div>
   )
 }
