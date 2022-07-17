@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Social from '../components/Social'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <Social />
     </div>
   )
 }
