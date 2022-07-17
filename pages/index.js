@@ -27,6 +27,8 @@ export default function Home() {
     }
   ];
 
+  const skills = ['JavaScript (ES6+)', 'React JS', 'Node.js', 'Express.js', 'Tailwind CSS', 'BootStrap'];
+
   return (
     <div>
       <Head>
@@ -91,12 +93,10 @@ export default function Home() {
               </p>
 
               <div className='grid grid-cols-2 gap-2 w-96 mb-10 md:mb-0 lg:mb-0'>
-                <small className='flex items-center gap-x-3'><BiRightArrow className='text-primary' /> JavaScript (ES6+)</small>
-                <small className='flex items-center gap-x-3'><BiRightArrow className='text-primary' />React JS</small>
-                <small className='flex items-center gap-x-3'><BiRightArrow className='text-primary' />Node.js</small>
-                <small className='flex items-center gap-x-3'><BiRightArrow className='text-primary' />Express.js</small>
-                <small className='flex items-center gap-x-3'><BiRightArrow className='text-primary' />Tailwind CSS</small>
-                <small className='flex items-center gap-x-3'><BiRightArrow className='text-primary' />BootStrap</small>
+                {
+                  skills.map((skill, index) =>
+                    <small key={index} className='flex items-center gap-x-3'><BiRightArrow className='text-primary' />{skill}</small>)
+                }
               </div>
 
               <MobileSocial />
