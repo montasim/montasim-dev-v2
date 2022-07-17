@@ -55,7 +55,7 @@ const Navbar = () => {
     return (
         <div id='navbarHide' className="navbar fixed top-0 z-50 bg-[#112240] opacity-95" >
             <div className="navbar-start" >
-                <Link className="btn border-0 lg:text-xl md:text-xl text-lg text-primary uppercase lg:ml-6 md:ml-2 ml-2 hover:bg-[#112240]" href='/' > Montasim -Al- Mamun</Link >
+                <Link href='/'><a className="btn border-0 lg:text-xl md:text-xl text-lg text-primary uppercase lg:ml-6 md:ml-2 ml-2 hover:bg-[#112240]" >Montasim -Al- Mamun</a></Link >
             </div >
 
             <div className="navbar-center" >
