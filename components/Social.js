@@ -26,7 +26,7 @@ const Social = () => {
             <div className='flex flex-col gap-y-6 justify-center'>
                 {
                     socialLinks.map(socialLink =>
-                        <Link key={socialLink.id} className='text-2xl hover:text-primary' href={socialLink.route} target='_blank' rel="noreferrer">{socialLink.icon}</Link>)
+                        <a key={socialLink.id} className='text-2xl hover:text-primary' href={socialLink.route} target='_blank' rel="noreferrer">{socialLink.icon}</a>)
                 }
                 <div className='bg-white h-20 w-0.5 ml-[10px]'></div>
             </div>
