@@ -170,7 +170,9 @@ export default function Home() {
                   <div className='lg:w-5/12 md:w-5/12 w-full z-50'>
                     <div className='text-right'>
                       <p className='lg:text-lg md:text-lg text-md text-primary mb-2'>{project.projectCategory} Project</p>
-                      <h4 className='lg:text-2.5xl md:text-2.5xl text-2xl font-bold text-accent'>{project.projectName}</h4>
+                      <a href={project.liveWebsiteLink}>
+                        <h4 className='lg:text-2.5xl md:text-2.5xl text-2xl font-bold text-accent hover:text-[#64ffda]'>{project.projectName}</h4>
+                      </a>
                     </div>
 
                     <div className='bg-[#112240] p-6 text-right my-6 lg:ml-[-100px] md:lg:ml-[-100px] ml-0 rounded'>
