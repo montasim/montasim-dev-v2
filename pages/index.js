@@ -199,7 +199,7 @@ export default function Home() {
 
           <div className='text-center mt-14'>
             <h2 className='text-3xl font-bold text-accent mb-6'>Other Noteworthy Projects</h2>
-            <Link href='/archive' className='text-lg text-primary hover:underline transition duration-700 ease-in-out'>view the archive</Link>
+            <Link href='/archive'><a className='text-lg text-primary hover:underline transition duration-700 ease-in-out'>view the archive</a></Link>
           </div>
 
           <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-20'>
