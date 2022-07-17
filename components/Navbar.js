@@ -1,19 +1,24 @@
 import { BiMenuAltRight } from 'react-icons/bi';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 const Navbar = () => {
     /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-    let prevScrollpos = window.pageYOffset;
+    let prevScrollpos;
 
-    window.onscroll = function () {
-        const currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbarHide").style.top = "0";
-        } else {
-            document.getElementById("navbarHide").style.top = "-70px";
-        }
-        prevScrollpos = currentScrollPos;
-    };
+    useEffect(() => {
+        prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbarHide").style.top = "0";
+            } else {
+                document.getElementById("navbarHide").style.top = "-70px";
+            }
+            prevScrollpos = currentScrollPos;
+        };
+    });
 
     const navMenus = [
         {
