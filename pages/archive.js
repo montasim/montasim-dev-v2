@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
-const archive = () => {
-    const [archive, setArchive] = useState([]);
+const Archive = () => {
+    const [archiveProjects, setArchiveProjects] = useState([]);
 
     const tableHeadings = ['SN', 'Title', 'Category', 'Build With', 'Link'];
 
     useEffect(() => {
         fetch('archive.json')
             .then(res => res.json())
-            .then(data => setArchive(data));
+            .then(data => setArchiveProjects(data));
     }, []);
 
     return (
@@ -30,7 +30,7 @@ const archive = () => {
                     </thead>
                     <tbody>
                         {
-                            archive?.map((project, index) => <tr key={project._id}>
+                            archiveProjects?.map((project, index) => <tr key={project._id}>
                                 <th className='text-primary'>{index + 1}</th>
                                 <td className='text-accent'>{project.projectName}</td>
                                 <td>{project.projectCategory}</td>
@@ -49,4 +49,4 @@ const archive = () => {
     );
 };
 
-export default archive;
+export default Archive;
