@@ -70,6 +70,7 @@ export default function Home() {
       </Head>
 
       <main>
+        {/* start introduction */}
         <section id='introduction' className='lg:mt-28 md:mt-28 mt-24 mb-28'>
           <div className="hero-content flex-col lg:flex-row-reverse" >
             <div>
@@ -81,7 +82,9 @@ export default function Home() {
             </div >
           </div >
         </section >
+        {/* end introduction */}
 
+        {/* start summary */}
         <section className='text-white mb-32'>
           <div className='max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8'>
             <ul
@@ -97,7 +100,9 @@ export default function Home() {
             </ul>
           </div>
         </section>
+        {/* end summary */}
 
+        {/* start about */}
         <section className='mb-24' id='about'>
           <div className='flex items-center gap-6'>
             <h3 className='lg:text-3xl md:text-3xl text-2xl text-accent font-bold'>About Me </h3>
@@ -143,13 +148,13 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* end about */}
 
+        {/* start projects */}
         <section id='projects' className="min-h-screen">
-          <div className="">
-            <div className='flex items-center gap-6'>
-              <h3 className='lg:text-3xl md:text-3xl text-2xl text-accent font-bold'>Some Things I’ve Built </h3>
-              <hr className='bg-[#233554] lg:w-80 md:w-64 w-40 h-0.5'></hr>
-            </div>
+          <div className='flex items-center gap-6'>
+            <h3 className='lg:text-3xl md:text-3xl text-2xl text-accent font-bold'>Some Things I’ve Built </h3>
+            <hr className='bg-[#233554] lg:w-80 md:w-64 w-40 h-0.5'></hr>
           </div>
 
           <div className="grid grid-cols-1 gap-8 mt-8 sm:gap-y-4"
@@ -158,8 +163,8 @@ export default function Home() {
               projects?.map((project) =>
                 <div key={project._id} className='flex flex-col md:flex-row lg:flex-row items-center justify-between gap-y-8 my-8'>
                   <Image
-                    width={500}
-                    height={500}
+                    width={840}
+                    height={450}
                     alt={project.projectName + ' home page'}
                     src={project.projectImg}
                     className="object-cover rounded-md lg:w-8/12 md:w-7/12 w-full"
@@ -229,7 +234,9 @@ export default function Home() {
             <button className="btn rounded-xs border-primary text-primary px-10 capitalize text-md mt-14 hover:bg-primary hover:opacity-70 hover:text-black" > Show All</button >
           </div>
         </section>
+        {/* end projects */}
 
+        {/* start contact */}
         <section id='contact' className='grid place-items-center mt-24'>
           <div className='max-w-xl text-center mb-16'>
             <h6 className='lg:text-lg md:text-lg text-md text-primary'>What’s Next?</h6>
@@ -265,6 +272,7 @@ export default function Home() {
             </form >
           </div >
         </section >
+        {/* end contact */}
       </main>
     </div>
   )
