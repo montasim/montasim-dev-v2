@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function MyApp({ Component, pageProps }) {
-  return <>
+  return <div style={{ scrollBehavior: 'smooth' }}>
     <Navbar />
     <Component {...pageProps} />
     <Footer />
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
       draggable
       pauseOnHover
     />
-  </>
+  </div>
 }
 
 export default MyApp
